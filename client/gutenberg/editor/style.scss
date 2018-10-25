@@ -64,11 +64,6 @@ $gutenberg-theme-toggle: #11a0d2;
 		top: 0;
 	}
 
-	.editor-inserter__menu .editor-inserter__search,
-	.edit-post-post-visibility__dialog .editor-post-visibility__dialog-password-input {
-		width: auto;
-	}
-
 	.editor-block-list__block {
 		ul ul, ol ol {
 			list-style-type: circle;
@@ -111,12 +106,19 @@ $gutenberg-theme-toggle: #11a0d2;
 	}
 
 	// UNSET CALYPSO DEFAULT STYLES
+	input[type='text'],
+	input[type='search'] {
+		width: auto;
+	}
+
 	input[type='number'].components-range-control__number {
 		width: 50px;
 	}
 
 	input[type=checkbox],
 	input[type=radio] {
+		float: none;
+
 		& + span {
 			margin-left: 0;
 		}
@@ -130,7 +132,7 @@ $gutenberg-theme-toggle: #11a0d2;
 
 	// MISSING CORE STYLES (TODO: Remove them once Gutenberg include the Core styles)
 	input[type='radio'] {
-		padding: 0;
+		padding: 0 !important;
 		float: none;
 
 		&:checked {
